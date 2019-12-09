@@ -1,18 +1,4 @@
-<?php
-    define('SITE_KEY', '6LdpQLkUAAAAADDBg0dBQGNVUwCPb2uP1Rykcv5I');
-    define('SECRET_KEY', '6LdpQLkUAAAAAMp8DQraj-gdU4GBoQOS8NqLTWGD');
-
-    if($_POST){
-        function getCaptcha($SecretKey){
-            $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
-            $Return = json_decode($Response);
-            return $Return;
-        }
-        $Return = getCaptcha($_POST['g-recaptcha-response']);
-        
-    }
-?>
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
