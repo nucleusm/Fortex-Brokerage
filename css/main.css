@@ -90,13 +90,24 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+:root {
+    --main-input-border: 1px solid rgba(255, 255, 255, 0.3);
+    --main-input-background-color: rgba(255, 255, 255, 0.1);
+    --secondary-input-border: 1px solid rgba(0, 0, 0, 0.3);
+    --secondary-input-background-color: rgba(0, 0, 0, 0.1);
+    --main-background-color: #F0F0F0;
+    --main-input-padding: 8px 8px;
+    --main-border-radius: 4px;
+    --main-line-height: 28px;
+}
+
 * {
     border-radius: 0;
     font-family: 'Lato', sans-serif;
 }
 
 body {
-    background-color: #F0F0F0;
+    background-color: var(--main-background-color);
 }
 
 h1,
@@ -110,35 +121,35 @@ h6 {
 }
 
 input[type=text] {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 8px 8px;
-    line-height: 28px;
+    border: var(--main-input-border);
+    border-radius: var(--main-border-radius);
+    background-color: var(--main-input-background-color);
+    padding: var(--main-input-padding);
+    line-height: var(--main-line-height);
     color: white;
 }
 
 input[type=textarea] {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 8px 8px;
-    line-height: 28px;
+    border: var(--secondary-input-border);
+    border-radius: var(--main-border-radius);
+    background-color: var(--secondary-input-background-color);
+    padding: var(--main-input-padding);
+    line-height: var(--main-line-height);
     color: white;
 }
 
 input[type=email] {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 8px 8px;
-    line-height: 28px;
+    border: var(--main-input-border);
+    border-radius: var(--main-border-radius);
+    background-color: var(--main-input-background-color);
+    padding: var(--main-input-padding);
+    line-height: var(--main-line-height);
     color: white;
 }
 
 footer{
     padding: .8rem 1rem;
-    background-color: #f0f0f0;
+    background-color: var(--main-background-color);
 }
 
 /* Custom Inputs */
@@ -148,21 +159,21 @@ footer{
 }
 
 .input-dark[type=text] {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 8px 8px;
-    line-height: 28px;
+    border: var(--secondary-input-border);
+    border-radius: var(--main-border-radius);
+    background-color: var(--secondary-input-background-color);
+    padding: var(--main-input-padding);
+    line-height: var(--main-line-height);
     color: black;
 
 }
 
 .input-dark[type=email] {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 8px 8px;
-    line-height: 28px;
+    border: var(--secondary-input-border);
+    border-radius: var(--main-border-radius);
+    background-color: var(--secondary-input-background-color);
+    padding: var(--main-input-padding);
+    line-height: var(--main-line-height);
     color: black;
 
 }
@@ -275,15 +286,12 @@ footer{
     background-color: rgba(23, 68, 152, 0.3);
     height: 50px;
     border-bottom: 1px;
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--main-input-border);
 }
 
 .jumbo-bar-border {
     border-right: 1px solid #304874;
 }
-
-
-
 
 .header-text {
     padding-top: 200px
@@ -403,48 +411,48 @@ footer{
 
 
     input[type=text] {
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 8px 8px;
-        line-height: 28px;
+        border: var(--main-input-border);
+        border-radius: var(--main-border-radius);
+        background-color: var(--main-input-background-color);
+        padding: var(--main-input-padding);
+        line-height: var(--main-line-height);
         color: white;
     }
 
     input[type=textarea] {
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.1);
-        padding: 8px 8px;
-        line-height: 28px;
+        border: var(--secondary-input-border);
+        border-radius: var(--main-border-radius);
+        background-color: var(--secondary-input-background-color);
+        padding: var(--main-input-padding);
+        line-height: var(--main-line-height);
         color: black;
     }
 
     .input-dark[type=text] {
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.1);
-        padding: 8px 8px;
-        line-height: 28px;
+        border: var(--secondary-input-border);
+        border-radius: var(--main-border-radius);
+        background-color: var(--secondary-input-background-color);
+        padding: var(--main-input-padding);
+        line-height: var(--main-line-height);
         color: black;
 
     }
 
     input[type=email] {
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 8px 8px;
-        line-height: 28px;
+        border: var(--main-input-border);
+        border-radius: var(--main-border-radius);
+        background-color: var(--main-input-background-color);
+        padding: var(--main-input-padding);
+        line-height: var(--main-line-height);
         color: white;
     }
 
     .input-dark[type=email] {
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.1);
-        padding: 8px 8px;
-        line-height: 28px;
+        border: var(--secondary-input-border);
+        border-radius: var(--main-border-radius);
+        background-color: var(--secondary-input-background-color);
+        padding: var(--main-input-padding);
+        line-height: var(--main-line-height);
         color: black;
 
     }
